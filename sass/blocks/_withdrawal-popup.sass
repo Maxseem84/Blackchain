@@ -1,0 +1,68 @@
+.withdrawal-popup
+    position: relative
+    text-align: center
+    margin-top: 140px
+    margin-bottom: 30px
+    .popup__btns
+        margin-top: 50px
+    &__balance
+        margin-top: 30px
+        span
+            font-size: 40px
+            font-weight: 600
+            display: block
+            white-space: nowrap
+            line-height: 1
+            margin-top: 5px
+    &__form
+        margin-top: 45px
+        display: flex
+        flex-direction: column
+        align-items: center
+        input[type=text],
+        input[type=password],
+        input[type=url],
+        input[type=email],
+        input[type=number]
+            width: 302px
+            & + input[type=text],
+            & + input[type=password],
+            & + input[type=url],
+            & + input[type=email],
+            & + input[type=number]
+                margin-top: 20px
+
+@media only screen and (max-width : 575px)
+
+    .withdrawal-popup
+        &__balance
+            font-size: 13px
+            span
+                font-size: 30px
+        &__form
+            margin-top: 30px
+            width: 100%
+            max-width: 290px
+            display: inline-flex
+            input[type=text],
+            input[type=password],
+            input[type=url],
+            input[type=email],
+            input[type=number]
+                width: 100%
+                & + input[type=text],
+                & + input[type=password],
+                & + input[type=url],
+                & + input[type=email],
+                & + input[type=number]
+                    margin-top: 10px
+            .popup__btns
+                margin-top: 30px
+                justify-content: space-between
+                width: calc(100% + 10px)
+                max-width: calc(100% + 10px)
+                margin-left: -5px
+                margin-right: -5px
+                .btn
+                    width: calc(50% - 10px)
+                    margin: 0 5px

@@ -1,0 +1,37 @@
+.unstake-popup
+    position: relative
+    text-align: center
+    margin-top: 140px
+    margin-bottom: 30px
+    .popup__btns
+        margin-top: 45px
+    &__time,
+    &__amount
+        margin-top: 30px
+        span
+            font-size: 40px
+            font-weight: 600
+            display: block
+            line-height: 1
+            white-space: nowrap
+            margin-top: 5px
+
+@media only screen and (max-width : 575px)
+
+    .unstake-popup
+        &__time,
+        &__amount
+            font-size: 13px
+            margin-top: 20px
+            span
+                font-size: 30px
+        .popup__btns
+            flex-direction: column
+            .btn
+                margin: 0
+                padding-left: 40px
+                padding-right: 40px
+                &:nth-child(1)
+                    width: 100%
+                    max-width: 290px
+                    margin-bottom: 10px

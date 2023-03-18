@@ -1,0 +1,160 @@
+.login
+    min-height: 600px
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    position: relative
+    &:before,
+    &::after
+        position: absolute
+        left: 0
+        right: 0
+        content: ''
+        display: block
+        background-repeat: repeat-x
+        z-index: -1
+        height: 30%
+        background-size: contain
+    &::before
+        background-image: url('../img/top-bg.svg')
+        top: 0
+        background-position: top center
+    &::after
+        background-image: url('../img/bottom-bg.svg')
+        bottom: 0
+        background-position: bottom center
+    &__logo
+        visibility: hidden
+    &__form
+        width: 302px
+        margin-top: 60px
+        visibility: hidden
+        input[type=text],
+        input[type=password],
+        input[type=url],
+        input[type=email]
+            width: 100%
+
+.open-wallet-btn
+    width: 302px
+    margin-top: 17px
+    font-size: 18px
+    visibility: hidden
+    height: 50px
+    border-radius: 25px
+
+.code-words
+    text-align: center
+    &__title
+        margin: 0
+        font-weight: 600
+        font-size: 20px
+        line-height: 1.7
+    &__subtitle
+        margin: 0
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.3
+        margin-top: 10px
+    &__btns
+        margin-top: 40px
+        counter-reset: item
+        display: flex
+        flex-wrap: wrap
+        justify-content: center
+        margin-right: -9px
+        margin-left: -9px
+    &__btn
+        margin-top: 22px
+        height: 40px
+        border-radius: 40px
+
+.code-word
+    position: relative
+    padding-left: 20px
+    display: flex
+    align-items: center
+    margin-bottom: 18px
+    margin-left: 9px
+    margin-right: 9px
+    &:before
+        content: counter(item) "."
+        counter-increment: item
+        margin-right: 7px
+    &__btn
+        padding: 3px 16px
+        background-image: none
+        background-color: #5F3EFF
+        font-size: 14px
+        height: 30px
+        text-transform: lowercase
+        transition: background-color .2s
+        &::after
+            display: none
+        &.is-active,
+        &:hover
+            background-color: $green
+
+@media only screen and (max-height : 749px)
+
+    .login
+        &:before,
+        &::after
+            height: 20%
+
+@media only screen and (max-width : 1199px)
+
+    .login
+        &:before,
+        &::after
+            height: 30%
+            background-size: cover
+
+@media only screen and (max-width : 1199px)
+
+    .code-words
+        &__btns
+            display: block
+            column-count: 4
+            margin-left: 0
+            margin-right: 0
+
+    .code-word
+        display: block
+        margin-left: 0
+        margin-right: 0
+        text-align: left
+        &::before
+            position: absolute
+            left: 0
+            top: 50%
+            transform: translateY(-50%)
+
+@media only screen and (max-width : 767px)
+
+    .code-words
+        &__btns
+            column-count: 3
+
+@media only screen and (max-width : 575px)
+
+    .login
+        padding: 50px 0
+        &__logo
+            position: absolute
+            left: 50%
+            top: 40%
+            transform: translate(-50%, -50%)
+            width: 114px
+        &__form
+            margin-top: auto
+
+    .code-words
+        padding-top: 55px
+        &__btns
+            column-count: 2
+        &__btn
+            width: 100%
+            max-width: 300px

@@ -1,0 +1,79 @@
+.stake-popup
+    position: relative
+    text-align: center
+    margin-top: 140px
+    margin-bottom: 30px
+    &__wallet
+        margin-top: 30px
+        font-size: 13px
+        span
+            display: block
+            font-size: 16px
+            font-weight: 600
+    &__info
+        line-height: 1.4
+        color: rgba(#fff, .62)
+        width: 314px
+        display: inline-block
+        margin-top: 30px
+        margin-bottom: -20px
+    &__form
+        margin-top: 30px
+        display: flex
+        flex-direction: column
+        align-items: center
+        input[type=text],
+        input[type=password],
+        input[type=url],
+        input[type=email],
+        input[type=number]
+            display: block
+            width: 302px
+
+@media only screen and (max-width : 575px)
+
+    .stake-popup
+        &__wallet
+            font-size: 13px
+            font-weight: 500
+            margin-top: 20px
+            span
+                font-size: 13px
+        &__info
+            font-size: 13px
+            margin-top: 30px
+            width: 100%
+            max-width: 290px
+        &__form
+            width: 100%
+            max-width: 290px
+            display: inline-flex
+            input[type=text],
+            input[type=password],
+            input[type=url],
+            input[type=email],
+            input[type=number]
+                width: 100%
+                & + input[type=text],
+                & + input[type=password],
+                & + input[type=url],
+                & + input[type=email],
+                & + input[type=number]
+                    margin-top: 10px
+            .popup__btns
+                margin-top: 30px
+                justify-content: space-between
+                width: calc(100% + 10px)
+                max-width: calc(100% + 10px)
+                margin-left: -5px
+                margin-right: -5px
+                .btn
+                    width: calc(50% - 10px)
+                    margin: 0 5px
+
+@media only screen and (max-width : 374px)
+
+    .stake-popup
+        &__wallet
+            span
+                word-break: break-all

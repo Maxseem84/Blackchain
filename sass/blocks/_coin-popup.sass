@@ -1,0 +1,77 @@
+.animation-popup
+    display: none
+    visibility: hidden
+    transition: margin-top .5s
+    &.is-fadein
+        visibility: visible
+        margin-top: -260px
+    &.is-visible
+        display: inline-block
+
+.coin-popup
+    position: relative
+    text-align: center
+    margin-top: 140px
+    margin-bottom: 30px
+    &__title
+        font-size: 24px
+        font-weight: 700
+    &__info
+        margin-top: 64px
+        width: 290px
+        display: inline-block
+    &__data
+        display: flex
+        align-items: center
+        justify-content: space-between
+        font-size: 20px
+        font-weight: 400
+        & + .coin-popup__data
+            margin-top: 16px
+        &-value
+            margin-left: auto
+            span
+                font-weight: 700
+    &__btns
+        display: flex
+        align-items: center
+        justify-content: center
+        margin-top: 105px
+        .btn
+            margin: 0 7.5px
+
+@media only screen and (max-width : 999px)
+
+    .animation-popup
+        &.is-fadein
+            margin-top: -210px
+
+@media only screen and (max-width : 575px)
+
+    .animation-popup
+        &.is-fadein
+            margin-top: -45px
+
+    .coin-popup
+        &__title
+            font-size: 20px
+        &__info
+            width: 100%
+            max-width: 290px
+            margin-top: 30px
+        &__data
+            font-size: 16px
+        &__btns
+            margin-top: 40px
+            display: inline-flex
+            flex-wrap: wrap
+            max-width: 300px
+            margin-left: -5px
+            margin-right: -5px
+            .btn
+                width: calc(50% - 10px)
+                margin: 0 5px
+                &:nth-child(2)
+                    margin-bottom: 10px
+                    width: 100%
+                    order: -1

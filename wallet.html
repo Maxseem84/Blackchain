@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Blackchain</title>
+    <meta name="description" content="" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#1B2783" />
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="libs/normalize.css" />
+    <link rel="stylesheet" href="libs/animate/animate.min.css" />
+    <link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="preloader">
+        <img class="preloader__icon" src="./img/preloader.gif" alt="Alt" />
+      </div>
+
+      <div class="wallet">
+        <div class="wallet-top">
+          <div class="wallet-header">
+            <img src="./img/logo-white.svg" alt="Alt" class="wallet__logo" />
+            <img src="./img/logo-mobile.svg" alt="Alt" class="wallet__mobile-logo" />
+            <div class="wallet-greeting">Glad to see you <span class="wallet-name">Dima</span></div>
+            <a href="/" class="wallet-back"
+              >Exit
+              <svg
+                width="16"
+                height="17"
+                viewBox="0 0 16 17"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_39_247)">
+                  <path
+                    d="M3.9999 1.5V3.5H1.9999V13.5H3.9999V15.5H-9.72748e-05V1.5H3.9999ZM3.9999 9.5V7.5H11.5999L7.2999 3.2L8.6999 1.8L15.3999 8.5L8.6999 15.2L7.2999 13.8L11.5999 9.5H3.9999Z"
+                    fill="white"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_39_247">
+                    <rect width="16" height="16" fill="white" transform="matrix(-1 0 0 1 16 0.5)" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </div>
+          <div class="wallet-balance">
+            <div class="wallet-balance__title">Blackchain Balance</div>
+            <div class="wallet-balance__total">$ <span id="wallet-balance-total">0</span></div>
+          </div>
+        </div>
+
+        <div class="coins">
+          <div class="coins-header">
+            <span class="coins-header__balance">Balance</span>
+            <span class="coins-header__value">Value</span>
+            <span class="coins-header__price">Price</span>
+            <span class="coins-header__procent">24h</span>
+            <span class="coins-header__graphic">7 days chart</span>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/ada.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Cardano</div>
+                <div class="coin-balance"><span class="coin-balance__text">0.575</span> ADA</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">11 568.68</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">-0.09</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/ada.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/bch.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Bitcoin Cash</div>
+                <div class="coin-balance"><span class="coin-balance__text">1.875</span> BCH</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">11 568.68</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">+0.07</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/bch.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/eth.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Ethereum</div>
+                <div class="coin-balance"><span class="coin-balance__text">0.575</span> ETH</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">8 157.01</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">-0.10</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/eth.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/usdt.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Tether</div>
+                <div class="coin-balance"><span class="coin-balance__text">0.575</span> USDT</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">11 568.68</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">-0.09</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/usdt.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/bnb.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">BNB</div>
+                <div class="coin-balance"><span class="coin-balance__text">1.875</span> BNB</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">11 568.68</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">+0.07</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/eth.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/xrp.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">XRP</div>
+                <div class="coin-balance"><span class="coin-balance__text">4.759</span> XRP</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">2 784.12</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">+0.03</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/xrp.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/matic.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Polygon</div>
+                <div class="coin-balance"><span class="coin-balance__text">0.575</span> MATIC</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">8 157.01</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">-0.10</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/matic.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/doge.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">DogeCoin</div>
+                <div class="coin-balance"><span class="coin-balance__text">1.875</span> DOGE</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">11 568.68</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">+0.07</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/doge.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/busd.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Binance USD</div>
+                <div class="coin-balance"><span class="coin-balance__text">4.759</span> BUSD</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">2 784.12</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">+0.03</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/busd.svg" alt="Alt" />
+            </div>
+          </div>
+
+          <div class="coin">
+            <div class="coin__header">
+              <img src="./img/coins/sol.svg" alt="Alt" class="coin__icon" />
+              <div class="coin__info">
+                <div class="coin__title">Solana</div>
+                <div class="coin-balance"><span class="coin-balance__text">0.575</span> SOL</div>
+              </div>
+            </div>
+            <div class="coin-value" data-th="Value">
+              $<span class="coin-value__text">8 157.01</span>
+            </div>
+            <div class="coin-price" data-th="Price">
+              $<span class="coin-price__text">0.34</span>
+            </div>
+            <div class="coin-procent" data-th="24h">
+              <span class="coin-procent__text">-0.10</span>%
+            </div>
+            <div class="coin-graphic" data-th="7 days chart">
+              <img src="./img/graphics/sol.svg" alt="Alt" />
+            </div>
+          </div>
+        </div>
+
+        <div class="popup animation-popup coin-popup" id="coin-popup">
+          <button class="popup__close" id="coin-popup-close">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+              <line
+                y1="-1"
+                x2="13.9425"
+                y2="-1"
+                transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <img src="" alt="Alt" class="popup__icon" />
+          <div class="coin-popup__title"></div>
+          <div class="coin-popup__info">
+            <div class="coin-popup__data">
+              <div class="coin-popup__data-title">Total</div>
+              <div class="coin-popup__data-value"><span>0</span>ADA</div>
+            </div>
+            <div class="coin-popup__data">
+              <div class="coin-popup__data-title">Available</div>
+              <div class="coin-popup__data-value"><span>0</span>ADA</div>
+            </div>
+            <div class="coin-popup__data">
+              <div class="coin-popup__data-title">Staked</div>
+              <div class="coin-popup__data-value"><span>0</span>ADA</div>
+            </div>
+            <div class="coin-popup__data">
+              <div class="coin-popup__data-title">Rewards</div>
+              <div class="coin-popup__data-value"><span>0</span>ADA</div>
+            </div>
+            <div class="coin-popup__data">
+              <div class="coin-popup__data-title">Unbonding</div>
+              <div class="coin-popup__data-value"><span>0</span>ADA</div>
+            </div>
+          </div>
+
+          <div class="coin-popup__btns">
+            <button data-href="#withdrawal-popup" class="btn btn--blue open-next-popup">
+              <span>Withdrawal</span>
+            </button>
+            <button data-href="#stake-popup" class="btn open-next-popup"><span>Stake</span></button>
+            <button data-href="#unstake-popup" class="btn btn--bdr open-next-popup">
+              <span>Unstake</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="popup animation-popup withdrawal-popup" id="withdrawal-popup">
+          <button class="popup__close next-popup-close">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+              <line
+                y1="-1"
+                x2="13.9425"
+                y2="-1"
+                transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <div class="popup__title">Withdraw funds</div>
+          <img src="" alt="Alt" class="popup__icon" />
+          <div class="popup__coin-title"></div>
+          <div class="withdrawal-popup__balance">Available for output<span>$ 25.032</span></div>
+          <form class="form withdrawal-popup__form">
+            <input type="number" placeholder="Withdrawal amount" />
+            <input type="text" placeholder="Paste your wallet address" />
+            <div class="popup__btns">
+              <button data-href="#withdrawal-popup-success" class="btn">
+                <span>Withdrawal</span>
+              </button>
+              <button class="btn btn--bdr next-popup-close">
+                <span>Cancel</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="popup animation-popup stake-popup" id="stake-popup">
+          <button class="popup__close next-popup-close">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+              <line
+                y1="-1"
+                x2="13.9425"
+                y2="-1"
+                transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <div class="popup__title">Stake</div>
+          <img src="" alt="Alt" class="popup__icon" />
+          <div class="popup__coin-title"></div>
+          <div class="stake-popup__wallet">
+            Send tokens to this wallet:<span>bc1qgxur5mr44mqcwk2m9gwyktpyfvk5hzx5ys9xk6</span>
+          </div>
+          <div class="stake-popup__info">
+            After you have sent, enter the amount sent in the field below and click the Stake button
+          </div>
+          <form class="form stake-popup__form">
+            <input type="number" placeholder="Enter the deposit amount" />
+            <div class="popup__btns">
+              <button data-href="#stake-popup-success" class="btn">
+                <span>Stake</span>
+              </button>
+              <button class="btn btn--bdr next-popup-close">
+                <span>Cancel</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="popup animation-popup unstake-popup" id="unstake-popup">
+          <button class="popup__close next-popup-close">
+            <svg
+              width="12"
+              height="12"
+              viewBox="0 0 12 12"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+              <line
+                y1="-1"
+                x2="13.9425"
+                y2="-1"
+                transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+                stroke="white"
+                stroke-width="2"
+              />
+            </svg>
+          </button>
+          <div class="popup__title">Unstake</div>
+          <img src="" alt="Alt" class="popup__icon" />
+          <div class="popup__coin-title"></div>
+          <div class="unstake-popup__time">
+            Estimated time of contract until<span>100 days</span>
+          </div>
+          <div class="unstake-popup__amount">Holding amount on balance:<span>$12.800</span></div>
+          <div class="popup__btns">
+            <button data-href="#unstake-popup-success" class="btn">
+              <span>Unstake immediately</span>
+            </button>
+            <button class="btn btn--bdr next-popup-close">
+              <span>Cancel</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden">
+      <div class="popup popup-success" id="withdrawal-popup-success">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div class="popup__title">Withdraw not available</div>
+        <div class="popup__text">
+          The tokens are locked until the contracts ends. <br />
+          Expire time: 2024/03/12 22:08
+        </div>
+        <button class="btn btn--bdr popup-success__close">
+          <span>Cancel</span>
+        </button>
+      </div>
+
+      <div class="popup popup-success" id="stake-popup-success">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <img src="./img/check.svg" alt="Alt" class="popup-success__check" />
+        <div class="popup__title">Your application has been submitted</div>
+        <div class="popup__text">
+          Please do not add a repeat application, <br />otherwise it will be added to the bottom of
+          the list.
+        </div>
+      </div>
+
+      <div class="popup popup-success" id="unstake-popup-success">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div class="popup__title">Unstake immediately</div>
+        <div class="popup__text">
+          If you want to close the contract immediately, then you need to pay 100$ to the wallet:
+          <span class="popup-success__wallet">bc1qgxur5mr44mqcwk2m9gwyktpyfvk5hzx5ys9xk6</span>
+        </div>
+        <div class="popup__btns">
+          <button href="javascript:void(0);" class="btn btn--blue">
+            <span>I paid the penalties</span>
+          </button>
+          <button class="btn btn--bdr popup-success__close">
+            <span>Cancel</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="libs/wow/wow.min.js"></script>
+    <script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

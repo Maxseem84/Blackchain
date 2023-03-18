@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" />
+
+    <title>Blackchain</title>
+    <meta name="description" content="" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <!-- Template Basic Images Start -->
+    <meta property="og:image" content="path/to/image.jpg" />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <!-- Template Basic Images End -->
+
+    <!-- Custom Browsers Color Start -->
+    <meta name="theme-color" content="#1B2783" />
+    <!-- Custom Browsers Color End -->
+
+    <link rel="stylesheet" href="libs/normalize.css" />
+    <link rel="stylesheet" href="libs/animate/animate.min.css" />
+    <link rel="stylesheet" href="libs/fancybox-master/dist/jquery.fancybox.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <div class="login">
+        <img
+          src="./img/logo.svg"
+          alt="Логотип"
+          class="logo login__logo wow"
+          style="animation-name: slideInBottom"
+        />
+        <form class="form login__form wow" style="animation-name: fadeIn; animation-delay: 0.5s">
+          <input
+            type="password"
+            id="open-wallet-password"
+            placeholder="Password"
+            autocomplete="new-password"
+          />
+        </form>
+        <button
+          data-href="#code-words"
+          class="btn open-wallet-btn is-disabled wow"
+          id="open-wallet-btn"
+          style="animation-name: fadeIn; animation-delay: 1s"
+        >
+          <span>Log In to Wallet</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="hidden">
+      <div class="popup code-words" id="code-words">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div class="code-words__title">Log in to your personal account.</div>
+        <div class="code-words__subtitle">Touch a combination of code words:</div>
+        <div class="code-words__btns"></div>
+        <a href="./wallet.html" class="btn code-words__btn is-disabled" id="code-words-btn">
+          <span>Continue</span>
+          <svg
+            width="22"
+            height="9"
+            viewBox="0 0 22 9"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21.3536 4.85356C21.5488 4.65829 21.5488 4.34171 21.3536 4.14645L18.1716 0.964468C17.9763 0.769205 17.6597 0.769205 17.4645 0.964468C17.2692 1.15973 17.2692 1.47631 17.4645 1.67157L20.2929 4.5L17.4645 7.32843C17.2692 7.52369 17.2692 7.84027 17.4645 8.03554C17.6597 8.2308 17.9763 8.2308 18.1716 8.03554L21.3536 4.85356ZM-4.37114e-08 5L21 5L21 4L4.37114e-08 4L-4.37114e-08 5Z"
+              fill="white"
+            />
+          </svg>
+        </a>
+      </div>
+      <div class="popup popup-success password-error" id="password-error">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <div class="popup__title">Incorrect password</div>
+        <div class="popup__text">Lorem ipsum dolor sit amet.</div>
+      </div>
+    </div>
+
+    <script src="libs/jquery/jquery.js"></script>
+    <script src="libs/wow/wow.min.js"></script>
+    <script src="libs/fancybox-master/dist/jquery.fancybox.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
