@@ -994,6 +994,7 @@ svg {
 }
 .wallet {
   text-align: center;
+  margin-bottom: 60px;
 }
 .wallet-top {
   width: 1000px;
