@@ -37,7 +37,7 @@
             <img src="./img/logo-white.svg" alt="Alt" class="wallet__logo" />
             <img src="./img/logo-mobile.svg" alt="Alt" class="wallet__mobile-logo" />
             <div class="wallet-greeting">Glad to see you <span class="wallet-name">Dima</span></div>
-            <a href="/Blackchain/" class="wallet-back"
+            <a href="/" class="wallet-back"
               >Exit
               <svg
                 width="16"
@@ -377,10 +377,10 @@
           <div class="popup__coin-title"></div>
           <div class="withdrawal-popup__balance">Available for output<span>$ 25.032</span></div>
           <form class="form withdrawal-popup__form">
-            <input type="number" placeholder="Withdrawal amount" />
-            <input type="text" placeholder="Paste your wallet address" />
+            <input type="number" placeholder="Withdrawal amount" required />
+            <input type="text" placeholder="Paste your wallet address" required />
             <div class="popup__btns">
-              <button data-href="#withdrawal-popup-success" class="btn">
+              <button class="btn">
                 <span>Withdrawal</span>
               </button>
               <button class="btn btn--bdr next-popup-close">
@@ -420,9 +420,9 @@
             After you have sent, enter the amount sent in the field below and click the Stake button
           </div>
           <form class="form stake-popup__form">
-            <input type="number" placeholder="Enter the deposit amount" />
+            <input type="number" placeholder="Enter the deposit amount" required />
             <div class="popup__btns">
-              <button data-href="#stake-popup-success" class="btn">
+              <button class="btn">
                 <span>Stake</span>
               </button>
               <button class="btn btn--bdr next-popup-close">
@@ -556,12 +556,40 @@
           <span class="popup-success__wallet">bc1qgxur5mr44mqcwk2m9gwyktpyfvk5hzx5ys9xk6</span>
         </div>
         <div class="popup__btns">
-          <button href="javascript:void(0);" class="btn btn--blue">
+          <button data-href="#unstake-popup-success-final" class="btn btn--blue">
             <span>I paid the penalties</span>
           </button>
           <button class="btn btn--bdr popup-success__close">
             <span>Cancel</span>
           </button>
+        </div>
+      </div>
+
+      <div class="popup popup-success" id="unstake-popup-success-final">
+        <button class="popup__close">
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M10.7783 1.13891L1.00004 11.0777" stroke="white" stroke-width="2" />
+            <line
+              y1="-1"
+              x2="13.9425"
+              y2="-1"
+              transform="matrix(-0.701327 -0.712839 0.701328 -0.712839 11.2686 10.4388)"
+              stroke="white"
+              stroke-width="2"
+            />
+          </svg>
+        </button>
+        <img src="./img/check.svg" alt="Alt" class="popup-success__check" />
+        <div class="popup__title">Lorem, ipsum dolor.</div>
+        <div class="popup__text">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. <br />Possimus exercitationem
+          velit harum temporibus odit!
         </div>
       </div>
     </div>
