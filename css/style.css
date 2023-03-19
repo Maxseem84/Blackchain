@@ -281,8 +281,9 @@ svg {
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
-.btn.is-disabled {
+.btn.is-disabled, .btn:disabled {
   pointer-events: none;
+  opacity: 0.7;
 }
 .btn:hover::after {
   opacity: 1;
@@ -916,10 +917,15 @@ svg {
 .code-word__btn::after {
   display: none;
 }
-.code-word__btn.is-active, .code-word__btn:hover {
+.code-word__btn.is-active {
   background-color: #35C880;
 }
 
+@media only screen and (min-width: 992px) {
+  .code-word__btn:not(.is-active):hover {
+    background-color: #8971ff;
+  }
+}
 @media only screen and (max-height: 749px) {
   .login:before, .login::after {
     height: 20%;
@@ -1070,12 +1076,24 @@ svg {
 
 .coins {
   width: 930px;
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   top: -45px;
+  margin-top: 0;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: visibility 0.5s, opacity 0.5s, margin-top 0.5s;
+  transition: visibility 0.5s, opacity 0.5s, margin-top 0.5s;
 }
-.coins.is-hidden {
+.coins.is-no-visible {
   display: none;
+}
+.coins.is-fadeout {
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 260px;
 }
 .coins-header {
   text-align: left;
@@ -1378,8 +1396,8 @@ svg {
 .animation-popup {
   display: none;
   visibility: hidden;
-  -webkit-transition: margin-top 0.5s;
-  transition: margin-top 0.5s;
+  -webkit-transition: visibility 0.5s, margin-top 0.5s;
+  transition: visibility 0.5s, margin-top 0.5s;
 }
 .animation-popup.is-fadein {
   visibility: visible;
