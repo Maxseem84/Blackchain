@@ -55,9 +55,7 @@
   font-display: swap;
 }
 html {
-  min-height: 100%;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#1A0052), to(#011457));
-  background-image: linear-gradient(180deg, #1A0052 0%, #011457 100%);
+  min-height: 100vh;
 }
 
 body {
@@ -68,6 +66,8 @@ body {
   color: #fff;
   font-family: "BalooDa2";
   font-weight: 500;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1A0052), to(#011457));
+  background-image: linear-gradient(180deg, #1A0052 0%, #011457 100%);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: none;
